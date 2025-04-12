@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="/dashboard"
+        href=""
         rel="noopener noreferrer"
       >
         <Image
@@ -15,7 +15,7 @@ export default function Footer() {
           width={16}
           height={16}
         />
-        Dashboard
+        FAQ
       </a>
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
