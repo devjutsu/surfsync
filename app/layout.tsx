@@ -36,13 +36,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="surftrack">
-      <head>
-        {/* Подключаем Material Symbols */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=optional"
-          rel="stylesheet"
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
