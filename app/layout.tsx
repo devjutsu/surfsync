@@ -16,6 +16,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'SurfSync Board Tracker',
   description: 'Track your board and surf sessions with Surf Sync',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon-32x32.png',
+  },
+  manifest: '/manifest.json',
+  other: {
+    // Подключаем Material Symbols
+    'link:material-symbols':
+      'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=optional',
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +36,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="surftrack">
-      {/* Head content moved to _document.tsx */}
+      <head>
+        {/* Подключаем Material Symbols */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=optional"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
