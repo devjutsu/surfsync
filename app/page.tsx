@@ -22,14 +22,14 @@ export default function Home() {
 
           <div className="flex gap-4 items-center flex-col sm:flex-row">
             <a
-              className="btn btn-primary rounded-full"
+              className="btn btn-primary rounded-full opacity-90 hover:opacity-100"
               href="/dashboard"
               rel="noopener noreferrer"
             >
               Dashboard
             </a>
             <a
-              className="btn btn-accent rounded-full"
+              className="btn btn-warning rounded-full opacity-90 hover:opacity-100"
               href=""
               rel="noopener noreferrer"
             >

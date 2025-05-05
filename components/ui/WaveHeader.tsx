@@ -43,13 +43,13 @@ export default function WaveHeader() {
   return (
     <header className="fixed top-0 w-full bg-[#0A3B59] text-white shadow-md z-50">
       <div className="mx-auto px-4 py-6 max-w-4xl text-center">
-        <h1 className="text-2xl font-bold">SurfSync 🌊</h1>
-        <p className="text-xs text-white/70">Track your board with no limits</p>
+        <h1 className="text-2xl font-bold">Surf 🌊 Sync </h1>
+        <p className="text-xs text-white/70 font-[family-name:var(--font-geist-mono)]">Track your board with no limits</p>
       </div>
 
       <div className="wave-svg"></div>
       <div className="wave-bottom"></div>
-
+      <div className="wave-glow-bottom"></div>
       <div className="wave-glow" />
     </header>
   );

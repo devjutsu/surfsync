@@ -17,9 +17,9 @@
   --color-base-300: oklch(92% 0.04 240);
   --color-base-content: #f0f9ff;
 
-  --color-primary: #0F8DBF;
+  --color-primary: #145377;
   --color-primary-content: #f0f9ff;
-  --color-secondary: oklch(0.58 0.233 277.117);
+  --color-secondary: #0F8DBF;
   --color-secondary-content: #fff4f0;
   --color-accent: #1DDDF2;
   --color-accent-content: #001f29;
@@ -100,7 +100,7 @@
   .bg-radial-top-right {
     background-image: radial-gradient(ellipse at top right, var(--tw-gradient-stops));
   }
-  
+
   @keyframes wave {
     0%, 100% {
       transform: translateY(0) translateX(0);
