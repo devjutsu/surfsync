@@ -51,19 +51,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#F2490C]/80 via-[#0A3B59]/10 to-[#1DDDF2] backdrop-blur-sm">
-          {/* Анимированные волны */}
-          <div className="absolute z-0 top-0 left-0 w-full h-full animate-wave bg-radial-bottom-left from-[#F2490C]/30 via-[#F2490C]/10 to-transparent opacity-70 mix-blend-screen"></div>
-          <div className="absolute z-0 top-0 left-0 w-full h-full animate-wave-delay bg-radial-top-right from-[#1DDDF2]/20 via-[#1DDDF2]/5 to-transparent opacity-60 mix-blend-screen"></div>
+        <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#F2490C]/80 via-[#0A3B59]/05 to-[#1DDDF2]">
+          
 
           {/* Пульсирующее солнце */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-gradient-radial from-[#F2490C]/40 to-transparent rounded-full blur-3xl opacity-70 animate-pulse-slow"></div>
+          {/* <div className="border-5 border-lime-500 absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-gradient-radial from-[#F2490C]/40 to-transparent rounded-full blur-3xl opacity-70"></div> */}
 
           {/* Линия горизонта */}
-          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#F2490C]/40 blur-sm shadow-md shadow-[#F2490C]/40"></div>
+          {/* <div className="border-5 border-fuchsia-600 absolute bottom-0 left-0 w-full h-[2px] bg-[#F2490C]/40 blur-sm shadow-md shadow-[#F2490C]/40"></div> */}
 
           {/* Контент */}
-          <div className="relative z-10 flex items-center justify-center min-h-screen">
+          <div className="border-5 relative z-10 flex items-center justify-center min-h-screen">
             {children}
           </div>
         </div>
