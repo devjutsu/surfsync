@@ -41,15 +41,15 @@ import './WaveHeader.css';
 
 export default function WaveHeader() {
   return (
-    <header className="relative z-10 bg-[#0A3B59] text-white">
-      {/* Контент хедера */}
+    <header className="fixed top-0 w-full bg-[#0A3B59] text-white shadow-md z-50 opacity-90">
       <div className="mx-auto px-4 py-6 max-w-4xl text-center">
-        <h1 className="text-3xl font-bold">SurfSync 🌊</h1>
-        <p className="text-sm text-white/70">Track your surf sessions with style</p>
+        <h1 className="text-2xl font-bold">SurfSync 🌊</h1>
+        <p className="text-xs text-white/70">
+          Track your surf sessions with style
+        </p>
       </div>
 
-      {/* Волна через псевдоэлемент + clip-path */}
-      <div className="wave-border"></div>
+      <div className="wave-border" />
     </header>
   );
 }

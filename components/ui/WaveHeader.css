@@ -3,9 +3,11 @@
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 80px;
+    top: 90;
+    height: 60px;
     background: #0A3B59;
-    z-index: 0;
+    z-index: -1;
+    transform: rotate(180deg);
     animation: waveClip 8s ease-in-out infinite;
     clip-path: path(
       "M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"

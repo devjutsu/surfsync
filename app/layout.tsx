@@ -61,7 +61,7 @@ export default function RootLayout({
           {/* <div className="border-5 border-fuchsia-600 absolute bottom-0 left-0 w-full h-[2px] bg-[#F2490C]/40 blur-sm shadow-md shadow-[#F2490C]/40"></div> */}
 
           {/* Контент */}
-          <div className="border-5 relative z-10 flex items-center justify-center min-h-screen">
+          <div className="relative z-10 flex items-center justify-center min-h-screen">
             {children}
           </div>
         </div>
