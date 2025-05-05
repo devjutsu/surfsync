@@ -48,6 +48,8 @@ export default function WaveHeader() {
       </div>
 
       <div className="wave-svg" />
+
+      <div className="wave-glow" />
     </header>
   );
 }
