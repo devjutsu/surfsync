@@ -92,3 +92,43 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+@layer utilities {
+  .bg-radial-bottom-left {
+    background-image: radial-gradient(ellipse at bottom left, var(--tw-gradient-stops));
+  }
+  .bg-radial-top-right {
+    background-image: radial-gradient(ellipse at top right, var(--tw-gradient-stops));
+  }
+  
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(20px);
+    }
+  }
+  
+  @keyframes wave-delay {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(20px) translateX(-20px);
+    }
+  }
+  
+  .animate-wave {
+    animation: wave 10s ease-in-out infinite;
+  }
+  .animate-wave-delay {
+    animation: wave-delay 12s ease-in-out infinite alternate;
+  }
+  .animate-pulse-slow {
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+
+

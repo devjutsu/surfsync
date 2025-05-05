@@ -23,7 +23,7 @@ export default function Home() {
             Dashboard
           </a>
           <a
-            className="btn btn-secondary rounded-full"
+            className="btn btn-accent rounded-full"
             href=""
             rel="noopener noreferrer"
           >
