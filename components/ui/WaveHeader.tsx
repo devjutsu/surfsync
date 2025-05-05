@@ -41,15 +41,13 @@ import './WaveHeader.css';
 
 export default function WaveHeader() {
   return (
-    <header className="fixed top-0 w-full bg-[#0A3B59] text-white shadow-md z-50 opacity-90">
+    <header className="fixed top-0 w-full bg-[#0A3B59] text-white shadow-md z-50">
       <div className="mx-auto px-4 py-6 max-w-4xl text-center">
         <h1 className="text-2xl font-bold">SurfSync 🌊</h1>
-        <p className="text-xs text-white/70">
-          Track your surf sessions with style
-        </p>
+        <p className="text-xs text-white/70">Track your surf sessions with style</p>
       </div>
 
-      <div className="wave-border" />
+      <div className="wave-svg" />
     </header>
   );
 }

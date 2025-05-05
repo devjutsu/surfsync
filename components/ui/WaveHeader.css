@@ -1,25 +1,26 @@
-.wave-border {
+.wave-svg {
     position: absolute;
-    bottom: -1px;
+    top: 80%;
     left: 0;
     width: 100%;
-    top: 90;
-    height: 60px;
-    background: #0A3B59;
-    z-index: -1;
-    transform: rotate(180deg);
-    animation: waveClip 8s ease-in-out infinite;
-    clip-path: path(
-      "M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"
-    );
+    height: 80px;
+    z-index: 0;
+    rotate: 180deg;
+    overflow: hidden;
+    background: url("data:image/svg+xml;utf8,\
+    <svg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'>\
+      <path fill='%230A3B59' d='M0,160 C360,320 1080,0 1440,160 L1440,320 L0,320 Z' />\
+    </svg>") repeat-x bottom;
+    background-size: 200% 100%;
+    animation: waveScroll 10s ease-in-out infinite;
   }
   
-  @keyframes waveClip {
+  @keyframes waveScroll {
     0%, 100% {
-      clip-path: path("M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z");
+      background-position-x: 0%;
     }
     50% {
-      clip-path: path("M0,30 C400,60 1040,60 1440,20 L1440,80 L0,80 Z");
+      background-position-x: 25%;
     }
   }
   
