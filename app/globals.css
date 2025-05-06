@@ -130,5 +130,17 @@
   }
 }
 
+@keyframes bg-pan {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
 
+.bg-pan {
+  background-size: 300% 300%;
+  animation: bg-pan 10s ease-in-out infinite;
+}
 

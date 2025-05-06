@@ -51,9 +51,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#F2490C]/80 via-[#0A3B59]/05 to-[#1DDDF2]">
-          
-
+        <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#F2490C]/80 via-[#0A3B59]/05 to-[#1DDDF2] pb-16 bg-panz">
           {/* Пульсирующее солнце */}
           {/* <div className="border-5 border-lime-500 absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-gradient-radial from-[#F2490C]/40 to-transparent rounded-full blur-3xl opacity-70"></div> */}
 
