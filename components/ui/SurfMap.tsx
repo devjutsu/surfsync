@@ -1,27 +1,23 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Map, { Marker, MapRef } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export default function SurfMap() {
   const mapRef = useRef<MapRef | null>(null);
-  const [location, setLocation] = useState<[number, number]>([108.25, 10.953]);
-  const [readyToFly, setReadyToFly] = useState(false);
+  const [location] = useState<[number, number]>([108.25, 10.95]);
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((pos) => {
-      const coords: [number, number] = [pos.coords.longitude, pos.coords.latitude];
-      setLocation(coords);
-      setReadyToFly(true); 
-    });
-  }, []);
 
   const handleMapLoad = () => {
-    if (mapRef.current && readyToFly) {
+    console.log('mapRef.current', mapRef.current);
+    console.log('location', location);
+    if (mapRef.current) {
+      console.log('Flying to location:', location);
       mapRef.current.flyTo({
+        
         center: location,
-        zoom: 10,
+        zoom: 13,
         duration: 1000,
       });
     }

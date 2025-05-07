@@ -32,7 +32,27 @@
     background-position-x: 0%;
   }
   50% {
-    background-position-x: 25%;
+    background-position-x: 100%;
+  }
+}
+
+@keyframes waveUp {
+  0%,
+  100% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
   }
 }
 
@@ -49,14 +69,19 @@
 }
 
 .wave-glow-bottom {
-    position: absolute;
-    top: calc(100% - 20px);
-    left: 0;
-    width: 100%;
-    height: 20px;
-    z-index: 0;
-    box-shadow: 0 20px 0px rgba(29, 221, 242, 0.5);
-    filter: blur(8px);
-    opacity: 0.7;
-    border: 1px solid red;
-  }
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 30;
+  box-shadow: -1px 16px 23px 2px rgba(29, 221, 242, 0.5);
+  -webkit-box-shadow: -1px 16px 23px 2px rgba(29, 221, 242, 0.5);
+  -moz-box-shadow: -1px 16px 23px 2px rgba(29, 221, 242, 0.5);
+
+  filter: blur(8px);
+  opacity: 0.7;
+
+  animation: glowPulse 8s ease-in-out infinite, waveUp 6s ease-in-out infinite;
+}
+/* box-shadow: 0 20px 0px rgba(29, 221, 242, 0.5); */
