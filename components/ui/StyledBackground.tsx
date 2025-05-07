@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useThemeStore } from '@/hooks/useThemeStore';
+import clsx from 'clsx';
 
 export default function ThemeInitializer({
   children,
@@ -10,6 +11,7 @@ export default function ThemeInitializer({
 }>) {
   const setDarkMode = useThemeStore((state) => state.setDarkMode);
   const setRolling = useThemeStore((state) => state.setRolling);
+  const rollingEnabled = useThemeStore((state) => state.rolling);
 
   useEffect(() => {
     const darkModeSaved = localStorage.getItem('darkMode');
@@ -19,11 +21,17 @@ export default function ThemeInitializer({
     const rollingSaved = localStorage.getItem('rolling');
     const rollingEnabled = rollingSaved ? JSON.parse(rollingSaved) : false;
     setRolling(rollingEnabled);
-    
   }, [setDarkMode, setRolling]);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#F2490C]/80 via-[#0A3B59]/05 to-[#1DDDF2] pb-16 bg-panx">
+    <div
+      className={clsx(
+        'relative min-h-screen overflow-hidden bg-gradient-to-r from-[#F2490C]/80 via-[#0A3B59]/05 to-[#1DDDF2] pb-16',
+        {
+          'bg-pan': rollingEnabled,
+        }
+      )}
+    >
       {/* Пульсирующее солнце */}
       {/* <div className="border-5 border-lime-500 absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-gradient-radial from-[#F2490C]/40 to-transparent rounded-full blur-3xl opacity-70"></div> */}
 
