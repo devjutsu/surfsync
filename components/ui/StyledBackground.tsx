@@ -15,7 +15,7 @@ export default function ThemeInitializer({
 
   useEffect(() => {
     const darkModeSaved = localStorage.getItem('darkMode');
-    const darkModeEnabled = darkModeSaved ? JSON.parse(darkModeSaved) : true;
+    const darkModeEnabled = darkModeSaved ? JSON.parse(darkModeSaved) : false;
     setDarkMode(darkModeEnabled);
 
     const rollingSaved = localStorage.getItem('rolling');
@@ -38,7 +38,6 @@ export default function ThemeInitializer({
       {/* Линия горизонта */}
       {/* <div className="border-5 border-fuchsia-600 absolute bottom-0 left-0 w-full h-[2px] bg-[#F2490C]/40 blur-sm shadow-md shadow-[#F2490C]/40"></div> */}
 
-      {/* Контент */}
       <div className="relative z-10 flex items-center justify-center min-h-screen">
         {children}
       </div>

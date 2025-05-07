@@ -1,4 +1,5 @@
 'use client';
+import TrackersConfig from '@/components/ui/TrackersConfig';
 import { useThemeStore } from '@/hooks/useThemeStore';
 
 export default function SettingsPage() {
@@ -23,11 +24,13 @@ export default function SettingsPage() {
             <input
               type="text"
               placeholder="Enter your name"
-              className="input input-bordered bg-base-100"
+              className="input input-bordered bg-base-100 m-2"
             />
           </label>
         </div>
       </div>
+
+      <TrackersConfig />
 
       {/* Настройки уведомлений */}
       <div className="card bg-neutral shadow-md">
@@ -62,7 +65,7 @@ export default function SettingsPage() {
           </div>
           <div className="form-control">
             <label className="label cursor-pointer justify-between">
-              <span className="label-text">Rolling</span>
+              <span className="label-text">Rolling background</span>
               <input
                 id="rolling"
                 type="checkbox"
