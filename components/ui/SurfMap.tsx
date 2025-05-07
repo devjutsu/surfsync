@@ -1,39 +1,48 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Map, { Marker } from 'react-map-gl/maplibre';
+import { useEffect, useState, useRef } from 'react';
+import Map, { Marker, MapRef } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export default function SurfMap() {
-  const [location, setLocation] = useState<[number, number]>([108.25, 10.953]); // Mui Ne по умолчанию
+  const mapRef = useRef<MapRef | null>(null);
+  const [location, setLocation] = useState<[number, number]>([108.25, 10.953]);
+  const [readyToFly, setReadyToFly] = useState(false);
 
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((pos) => {
-        setLocation([pos.coords.longitude, pos.coords.latitude]);
-      });
-    }
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const coords: [number, number] = [pos.coords.longitude, pos.coords.latitude];
+      setLocation(coords);
+      setReadyToFly(true); 
+    });
   }, []);
 
+  const handleMapLoad = () => {
+    if (mapRef.current && readyToFly) {
+      mapRef.current.flyTo({
+        center: location,
+        zoom: 10,
+        duration: 1000,
+      });
+    }
+  };
+
   return (
-    <div className="w-full h-full border-2 border-red-600 rounded-xl">
+    <div className="w-full h-full rounded-xl">
       <Map
-        initialViewState={{
-          longitude: location[0],
-          latitude: location[1],
-          zoom: 13,
+        ref={(instance) => {
+          if (instance) mapRef.current = instance;
         }}
         style={{
           width: '100%',
           height: '100%',
-          border: '1px solid lime',
-          padding: '10px',
           minWidth: '200px',
           minHeight: '300px',
           borderRadius: '10px',
         }}
         mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
-        // attributionControl={true}
+        attributionControl={false}
+        onLoad={handleMapLoad}
       >
         <Marker longitude={location[0]} latitude={location[1]} />
       </Map>

@@ -33,14 +33,12 @@ export const useThemeStore = create<ThemeState>((set) => ({
   rolling: false,
   toggleRolling: () =>
     set((state) => {
-      console.log('Toggling rolling state:', state.rolling);
       const newValue = !state.rolling;
       document.documentElement.setAttribute('rolling', String(newValue));
       localStorage.setItem('rolling', JSON.stringify(newValue));
       return { rolling: newValue };
     }),
   setRolling: (value: boolean) => {
-    console.log('Setting rolling state:', value);
     document.documentElement.setAttribute('rolling', value ? 'true' : 'false');
     localStorage.setItem('rolling', JSON.stringify(value));
     set({ rolling: value });

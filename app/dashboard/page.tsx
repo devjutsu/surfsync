@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '../../components/ui/card';
 import { Button } from '@/components/ui/button';
-// import Map from "@/components/ui/SurfMap";
-import dynamic from 'next/dynamic';
+import SurfMap from "@/components/ui/SurfMap";
+// import dynamic from 'next/dynamic';
 
 export default function Dashboard() {
-  const SurfMap = dynamic(() => import('@/components/ui/SurfMap'), {
-    ssr: false,
-  });
+  // const SurfMap = dynamic(() => import('@/components/ui/SurfMap'), {
+  //   ssr: false,
+  // });
   const [sessionActive, setSessionActive] = useState(false);
   const [startTime, setStartTime] = useState<string | null>(null);
   const [duration, setDuration] = useState('00:00:00');

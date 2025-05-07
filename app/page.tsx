@@ -31,7 +31,8 @@ export default function Home() {
             </a>
             <a
               className="btn btn-warning rounded-full opacity-90 hover:opacity-100"
-              href=""
+              href="https://www.etsy.com/listing/1883950590/kitesurfing-tracker-surf-tracker-foill"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <span className="material-symbols-rounded">phonelink_ring</span>
