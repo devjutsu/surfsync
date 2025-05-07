@@ -18,13 +18,10 @@ export default function SettingsPage() {
         <div className="card-body">
           <h2 className="card-title">Profile</h2>
           <label className="form-control w-full">
-            <div className="label">
-              <span className="label-text text-primary-content">Username</span>
-            </div>
             <input
               type="text"
               placeholder="Enter your name"
-              className="input input-bordered bg-base-100 m-2"
+              className="input input-bordered bg-base-100"
             />
           </label>
         </div>
@@ -38,11 +35,11 @@ export default function SettingsPage() {
           <h2 className="card-title">Notifications</h2>
           <label className="label cursor-pointer justify-between">
             <span className="label-text">Session reminders</span>
-            <input type="checkbox" className="toggle toggle-primary" />
+            <input type="checkbox" disabled className="toggle toggle-primary" />
           </label>
           <label className="label cursor-pointer justify-between">
             <span className="label-text">Tracking alerts</span>
-            <input type="checkbox" className="toggle toggle-primary" />
+            <input type="checkbox" disabled className="toggle toggle-primary" />
           </label>
         </div>
       </div>
@@ -51,30 +48,28 @@ export default function SettingsPage() {
       <div className="card bg-neutral shadow-md">
         <div className="card-body">
           <h2 className="card-title">Appearance</h2>
-          <div className="form-control">
-            <label className="label cursor-pointer justify-between">
-              <span className="label-text">Dark mode</span>
-              <input
-                id="darkMode"
-                type="checkbox"
-                className="toggle toggle-primary"
-                checked={darkMode}
-                onChange={toggleDarkMode}
-              />
-            </label>
-          </div>
-          <div className="form-control">
-            <label className="label cursor-pointer justify-between">
-              <span className="label-text">Rolling background</span>
-              <input
-                id="rolling"
-                type="checkbox"
-                className="toggle toggle-primary"
-                checked={rolling}
-                onChange={toggleRolling}
-              />
-            </label>
-          </div>
+          <label className="label cursor-pointer justify-between">
+            <span className="label-text">Dark mode</span>
+            <input
+              id="darkMode"
+              type="checkbox"
+              disabled
+              className="toggle toggle-primary"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+          </label>
+
+          <label className="label cursor-pointer justify-between">
+            <span className="label-text">Rolling background</span>
+            <input
+              id="rolling"
+              type="checkbox"
+              className="toggle toggle-primary"
+              checked={rolling}
+              onChange={toggleRolling}
+            />
+          </label>
         </div>
       </div>
 
@@ -85,6 +80,7 @@ export default function SettingsPage() {
   );
 }
 
+// - аватарка пользователя
 // - Переключение языка
 // - Управление устройствами (привязка трекеров)
 // - Выгрузка данных или экспорт сессий

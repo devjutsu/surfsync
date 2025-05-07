@@ -26,6 +26,7 @@ export default function Home() {
               href="/dashboard"
               rel="noopener noreferrer"
             >
+              <span className="material-symbols-rounded">surfing</span>
               Dashboard
             </a>
             <a
@@ -33,6 +34,7 @@ export default function Home() {
               href=""
               rel="noopener noreferrer"
             >
+              <span className="material-symbols-rounded">phonelink_ring</span>
               Get Tracker
             </a>
           </div>
