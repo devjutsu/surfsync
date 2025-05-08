@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '../../components/ui/card';
 import { Button } from '@/components/ui/button';
-import SurfMap from "@/components/ui/SurfMap";
+import SurfMap from '@/components/ui/SurfMap';
+import Link from 'next/link';
 // import dynamic from 'next/dynamic';
 
 export default function Dashboard() {
@@ -43,9 +44,11 @@ export default function Dashboard() {
         <Button variant="outline">Profile</Button>
       </div>
 
-      <SurfMap />
+      <Link href="/map">
+        <SurfMap />
+      </Link>
 
-      <Card className="mb-4">
+      <Card className="my-2">
         <CardContent className="p-4 grid grid-cols-2 gap-4">
           <div>
             <h2 className="font-semibold">Session Stats</h2>
